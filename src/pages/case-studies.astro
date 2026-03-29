@@ -9,9 +9,12 @@ import caseStudies from '../data/case-studies';
   description="Engineering-grade results: 32% revenue increase, 40% churn reduction, 75% cost reduction, and more. See how we've helped B2B SaaS companies pay down data debt."
 >
   <!-- Page Header -->
-  <section class="page-header section">
+  <section class="page-header section geo-grid">
     <div class="container">
-      <h1 class="text-center">Case Studies</h1>
+      <div class="header-content fade-up">
+        <h1 class="text-center">Case Studies</h1>
+        <p class="header-subtitle text-center">Real results from real engagements. Engineering-grade solutions for revenue infrastructure.</p>
+      </div>
     </div>
   </section>
 
@@ -110,15 +113,18 @@ import caseStudies from '../data/case-studies';
     font-family: var(--font-display);
     font-size: var(--text-4xl);
     font-weight: 900;
-    color: var(--heading-color);
+    color: white;
     margin-bottom: var(--space-md);
   }
 
   .header-subtitle {
     font-size: var(--text-lg);
-    color: var(--muted-text);
-    line-height: 1.6;
+    color: var(--slate);
+    line-height: 1.7;
     margin: 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .header-image {
