@@ -1,0 +1,298 @@
+---
+// ProcessFlow - Visual 5-step horizontal flow
+---
+
+<section class="process-flow-section">
+  <div class="container">
+    <div class="process-flow-header">
+      <h2>Your Revenue Stack, Compounding</h2>
+      <p>With a single source of truth powering your revenue stack, AI can learn what works, scale best practices across teams, and continuously improve messaging, outbound, and sales performance.</p>
+    </div>
+
+    <div class="process-flow-visual">
+      <svg class="flow-svg" viewBox="0 0 1200 200" preserveAspectRatio="xMidYMid meet">
+        <!-- Animated connection line -->
+        <defs>
+          <linearGradient id="flowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#0ea5e9" />
+            <stop offset="50%" stop-color="#22d3ee" />
+            <stop offset="100%" stop-color="#10b981" />
+          </linearGradient>
+          <filter id="glow">
+            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+            <feMerge>
+              <feMergeNode in="coloredBlur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+        </defs>
+
+        <!-- Background track -->
+        <path
+          d="M 120 100 L 1080 100"
+          stroke="#1e293b"
+          stroke-width="4"
+          fill="none"
+          stroke-linecap="round"
+        />
+
+        <!-- Animated flow line -->
+        <path
+          d="M 120 100 L 1080 100"
+          stroke="url(#flowGradient)"
+          stroke-width="4"
+          fill="none"
+          stroke-linecap="round"
+          class="flow-line"
+          filter="url(#glow)"
+        />
+
+        <!-- Flow particles -->
+        <circle r="6" fill="#22d3ee" filter="url(#glow)" class="particle">
+          <animateMotion dur="3s" repeatCount="indefinite" path="M 120 100 L 1080 100" />
+        </circle>
+        <circle r="4" fill="#10b981" filter="url(#glow)" class="particle">
+          <animateMotion dur="3s" repeatCount="indefinite" begin="1s" path="M 120 100 L 1080 100" />
+        </circle>
+        <circle r="5" fill="#0ea5e9" filter="url(#glow)" class="particle">
+          <animateMotion dur="3s" repeatCount="indefinite" begin="2s" path="M 120 100 L 1080 100" />
+        </circle>
+
+        <!-- Step nodes -->
+        <!-- Step 1: Explore -->
+        <g class="step-node" transform="translate(120, 100)">
+          <circle r="40" fill="#0f172a" stroke="#0ea5e9" stroke-width="3" class="node-circle" />
+          <text y="5" text-anchor="middle" fill="#0ea5e9" font-family="monospace" font-size="20" font-weight="bold">01</text>
+        </g>
+
+        <!-- Step 2: Codify -->
+        <g class="step-node" transform="translate(360, 100)">
+          <circle r="40" fill="#0f172a" stroke="#0ea5e9" stroke-width="3" class="node-circle" />
+          <text y="5" text-anchor="middle" fill="#0ea5e9" font-family="monospace" font-size="20" font-weight="bold">02</text>
+        </g>
+
+        <!-- Step 3: Connect -->
+        <g class="step-node" transform="translate(600, 100)">
+          <circle r="40" fill="#0f172a" stroke="#22d3ee" stroke-width="3" class="node-circle" />
+          <text y="5" text-anchor="middle" fill="#22d3ee" font-family="monospace" font-size="20" font-weight="bold">03</text>
+        </g>
+
+        <!-- Step 4: Empower -->
+        <g class="step-node" transform="translate(840, 100)">
+          <circle r="40" fill="#0f172a" stroke="#10b981" stroke-width="3" class="node-circle" />
+          <text y="5" text-anchor="middle" fill="#10b981" font-family="monospace" font-size="20" font-weight="bold">04</text>
+        </g>
+
+        <!-- Step 5: Compound -->
+        <g class="step-node" transform="translate(1080, 100)">
+          <circle r="48" fill="#10b981" stroke="#10b981" stroke-width="3" class="node-circle final" />
+          <text y="5" text-anchor="middle" fill="#0f172a" font-family="monospace" font-size="20" font-weight="bold">05</text>
+        </g>
+      </svg>
+    </div>
+
+    <div class="process-steps-row">
+      <div class="process-step-item">
+        <h3>Explore</h3>
+        <p>Audit your CRM, data, and systems. Find where revenue leaks.</p>
+      </div>
+
+      <div class="process-step-item">
+        <h3>Codify</h3>
+        <p>Define pipeline stages, ARR rules, and clean data standards. Once.</p>
+      </div>
+
+      <div class="process-step-item">
+        <h3>Connect</h3>
+        <p>One AI layer links your tools. Every team pulls from one accurate source of truth.</p>
+      </div>
+
+      <div class="process-step-item">
+        <h3>Empower</h3>
+        <p>Coach revenue teams to leverage AI with their tools for smarter execution.</p>
+      </div>
+
+      <div class="process-step-item final">
+        <h3>Compound</h3>
+        <p>New hires inherit everything. New tools plug in. Value accumulates.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .process-flow-section {
+    background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+    padding: var(--space-3xl) 0;
+    overflow: hidden;
+  }
+
+  .process-flow-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto var(--space-2xl);
+  }
+
+  .process-flow-header h2 {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 900;
+    color: white;
+    margin-bottom: var(--space-md);
+  }
+
+  .process-flow-header p {
+    font-family: var(--font-body);
+    font-size: var(--text-lg);
+    color: #94a3b8;
+    line-height: 1.7;
+  }
+
+  .process-flow-visual {
+    margin-bottom: var(--space-xl);
+  }
+
+  .flow-svg {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+  }
+
+  .flow-line {
+    stroke-dasharray: 960;
+    stroke-dashoffset: 960;
+    animation: drawLine 2s ease-out forwards;
+  }
+
+  @keyframes drawLine {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  .node-circle {
+    transition: all 0.3s ease;
+  }
+
+  .step-node:hover .node-circle {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 20px currentColor);
+  }
+
+  .node-circle.final {
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      filter: drop-shadow(0 0 10px #10b981);
+    }
+    50% {
+      filter: drop-shadow(0 0 25px #10b981);
+    }
+  }
+
+  .particle {
+    opacity: 0.8;
+  }
+
+  .process-steps-row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: var(--space-md);
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .process-step-item {
+    text-align: center;
+    padding: var(--space-lg) var(--space-sm);
+  }
+
+  .process-step-item h3 {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    font-weight: 700;
+    color: white;
+    margin-bottom: var(--space-sm);
+  }
+
+  .process-step-item p {
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    color: #94a3b8;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .process-step-item.final h3 {
+    color: #10b981;
+  }
+
+  /* Mobile: Stack vertically */
+  @media (max-width: 768px) {
+    .flow-svg {
+      display: none;
+    }
+
+    .process-steps-row {
+      grid-template-columns: 1fr;
+      gap: var(--space-lg);
+    }
+
+    .process-step-item {
+      display: flex;
+      align-items: flex-start;
+      text-align: left;
+      gap: var(--space-md);
+      padding: var(--space-md);
+      background: rgba(255,255,255,0.03);
+      border-radius: 12px;
+      border-left: 3px solid #0ea5e9;
+    }
+
+    .process-step-item.final {
+      border-left-color: #10b981;
+    }
+
+    .process-step-item::before {
+      content: counter(step, decimal-leading-zero);
+      counter-increment: step;
+      font-family: var(--font-mono);
+      font-size: var(--text-2xl);
+      font-weight: 700;
+      color: #0ea5e9;
+      flex-shrink: 0;
+      width: 48px;
+    }
+
+    .process-step-item.final::before {
+      color: #10b981;
+    }
+
+    .process-steps-row {
+      counter-reset: step;
+    }
+
+    .process-step-item h3 {
+      font-size: var(--text-lg);
+      margin-bottom: var(--space-xs);
+    }
+  }
+
+  /* Tablet: 3 + 2 layout */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .process-steps-row {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .process-step-item:nth-child(4),
+    .process-step-item:nth-child(5) {
+      grid-column: span 1;
+    }
+
+    .flow-svg {
+      max-height: 150px;
+    }
+  }
+</style>
