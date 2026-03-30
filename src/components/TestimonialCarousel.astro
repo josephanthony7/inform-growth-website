@@ -24,7 +24,7 @@
                 <img src="/clients/sylva_logo.svg" alt="Sylva" />
               </div>
               <h2 class="slide-headline">
-                "We consolidated 7 CRMs into one system and cut our costs by 75%"
+                "We consolidated 7 CRMs into one and cut costs by 75%"
               </h2>
               <div class="slide-context">
                 Sylva unified their entire revenue operation - 400K+ records migrated with zero data loss.
@@ -61,7 +61,7 @@
                 <img src="/clients/revenue_accelerator_logo_new-removebg-preview.png" alt="Revenue Accelerator" />
               </div>
               <h2 class="slide-headline">
-                "Finally, one source of truth for all our contact data"
+                "3 million contacts unified into one source of truth"
               </h2>
               <div class="slide-context">
                 Revenue Accelerator eliminated duplicate records and reduced data costs by 40%.
@@ -97,7 +97,7 @@
                 <img src="/clients/WTA-Logo-High-Vis-removebg-preview.png" alt="Women Travel Abroad" />
               </div>
               <h2 class="slide-headline">
-                "We can finally see which partners drive real revenue"
+                "Now we see exactly which partners drive real revenue"
               </h2>
               <div class="slide-context">
                 Women Travel Abroad built their first partner-level attribution system.
@@ -158,20 +158,23 @@
 
   .carousel-track {
     position: relative;
-    min-height: 420px;
+    height: 520px;
+    display: flex;
+    align-items: center;
   }
 
   @media (min-width: 900px) {
     .carousel-track {
-      min-height: 320px;
+      height: 280px;
     }
   }
 
   .carousel-slide {
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 0;
     right: 0;
+    transform: translateY(-50%);
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.5s ease;
@@ -180,7 +183,6 @@
   .carousel-slide.active {
     opacity: 1;
     visibility: visible;
-    position: relative;
   }
 
   .slide-inner {
@@ -192,30 +194,30 @@
 
   @media (min-width: 900px) {
     .slide-inner {
-      grid-template-columns: 140px 1fr 200px;
+      grid-template-columns: 100px 1fr 240px;
       gap: var(--space-2xl);
     }
   }
 
-  /* Hero Metric - The Big Number */
+  /* Hero Metric - Compact */
   .hero-metric {
     text-align: center;
-    padding: var(--space-lg);
+    padding: var(--space-md);
     background: rgba(200, 240, 74, 0.1);
-    border-radius: 16px;
+    border-radius: 12px;
     border: 1px solid rgba(200, 240, 74, 0.2);
   }
 
   @media (min-width: 900px) {
     .hero-metric {
-      padding: var(--space-xl) var(--space-lg);
+      padding: var(--space-md) var(--space-sm);
     }
   }
 
   .hero-metric-value {
     display: block;
     font-family: var(--font-display);
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-weight: 800;
     color: #C8F04A;
     line-height: 1;
@@ -224,16 +226,16 @@
 
   @media (min-width: 768px) {
     .hero-metric-value {
-      font-size: 4rem;
+      font-size: 2.75rem;
     }
   }
 
   .hero-metric-label {
     display: block;
     font-family: var(--font-body);
-    font-size: var(--text-sm);
+    font-size: var(--text-xs);
     color: rgba(255, 255, 255, 0.7);
-    margin-top: var(--space-2);
+    margin-top: var(--space-1);
     text-transform: uppercase;
     letter-spacing: 0.05em;
   }
@@ -242,7 +244,7 @@
   .slide-main {
     display: flex;
     flex-direction: column;
-    gap: var(--space-md);
+    gap: var(--space-sm);
   }
 
   .slide-logo {
@@ -310,12 +312,12 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: var(--space-md);
+    gap: var(--space-sm);
   }
 
   .person-photo {
-    width: 160px;
-    height: 160px;
+    width: 180px;
+    height: 180px;
     border-radius: 12px;
     overflow: hidden;
     border: 3px solid rgba(200, 240, 74, 0.3);
@@ -324,8 +326,8 @@
 
   @media (min-width: 768px) {
     .person-photo {
-      width: 180px;
-      height: 180px;
+      width: 220px;
+      height: 220px;
     }
   }
 
